@@ -1,0 +1,60 @@
+﻿@page
+@model PetDinos.Pages.PetStores.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PetStore[0].PSName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PetStore[0].Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PetStore[0].City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PetStore[0].State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PetStore[0].Zip)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.PetStore) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PSName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Zip)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.PSID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.PSID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.PSID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

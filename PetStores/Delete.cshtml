@@ -1,0 +1,52 @@
+﻿@page
+@model PetDinos.Pages.PetStores.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PetStore</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PetStore.PSName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PetStore.PSName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PetStore.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PetStore.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PetStore.City)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PetStore.City)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PetStore.State)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PetStore.State)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PetStore.Zip)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PetStore.Zip)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="PetStore.PSID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

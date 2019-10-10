@@ -1,0 +1,49 @@
+﻿@page
+@model PetDinos.Pages.PetStores.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>PetStore</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PetStore.PSName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PetStore.PSName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PetStore.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PetStore.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PetStore.City)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PetStore.City)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PetStore.State)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PetStore.State)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PetStore.Zip)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PetStore.Zip)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.PetStore.PSID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
