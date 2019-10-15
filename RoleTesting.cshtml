@@ -1,0 +1,30 @@
+﻿@page
+@model PetDinos.Pages.RoleTestingModel
+@{
+    ViewData["Title"] = "RoleTesting";
+}
+
+<h1>RoleTesting</h1>
+
+@if (Model.CurrentUserRole == "Admin")
+{
+    <section style="background-color:cadetblue;">
+        <h1>Welcome, Admin!</h1>
+    </section>
+}
+else if (Model.CurrentUserRole == "SLT")
+{
+    <section style="background-color:chartreuse;">
+        <h1>Welcome, SLT member!</h1>
+    </section>
+}
+else if (Model.CurrentUserRole == "DH")
+{
+    <section style="background-color:silver;">
+        <h1>Welcome, Dept. Head!</h1>
+    </section>
+}
+else
+{
+
+}
